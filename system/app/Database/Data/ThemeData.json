@@ -1,0 +1,14 @@
+[
+{
+"id_theme":1,
+"name":"Focus2",
+"type":"backend",
+"path":"themes\/backend\/focus2\/"
+},
+{
+"id_theme":2,
+"name":"StartBootstrap",
+"type":"frontend",
+"path":"themes\/frontend\/startbootstrap\/"
+}
+]

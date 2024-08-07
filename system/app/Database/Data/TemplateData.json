@@ -1,0 +1,82 @@
+[
+  {
+    "id_template":1,
+    "name":"template_label_forgot_pass",
+    "subject":"Recover Password",
+    "body":"Hello <b>[user_first_name]<\/b>,&nbsp;<div>Click on the link below to retrieve your password:&nbsp;<\/div><div><a href=\"http:\/\/[recovery_password]\" target=\"_blank\"><b>[recovery_password]<\/b><\/a><br><p><\/p><\/div>",
+    "type":"email",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":2,
+    "name":"template_label_forgot_pass",
+    "subject":null,
+    "body":"Hello, Click on the link below to retrieve your password: [recovery_password]",
+    "type":"sms",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":3,
+    "name":"template_label_welcome",
+    "subject":"Welcome",
+    "body":"Hi, welcome,\r\nWe are very happy for your registration.",
+    "type":"email",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":4,
+    "name":"template_label_welcome",
+    "subject":null,
+    "body":"Hi, welcome, We are very happy for your registration.",
+    "type":"sms",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":5,
+    "name":"template_label_tfa",
+    "subject":"Authentication Code",
+    "body":"Hello,\r\nBelow is your two-factor authentication code:\r\n<b>[otp_code]<\/b>",
+    "type":"email",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":6,
+    "name":"template_label_tfa",
+    "subject":null,
+    "body":"Hello, Below is your two-factor authentication code: [otp_code]",
+    "type":"sms",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":7,
+    "name":"template_label_confirmation_email",
+    "subject":"E-mail Confirmation",
+    "body":"Click on the link below to confirm your account:<br>\r\n[link_confirmation]",
+    "type":"email",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":8,
+    "name":"template_label_confirmation_sms",
+    "subject":null,
+    "body":"Click on the link below to confirm your account:\r\n[link_confirmation]",
+    "type":"sms",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":9,
+    "name":"template_label_notification",
+    "subject":"New User Notification",
+    "body":"Hello admin,<br>new user has been registered.",
+    "type":"email",
+    "updated_at":"2023\/11\/11 17:11:15"
+  },
+  {
+    "id_template":10,
+    "name":"template_label_notification",
+    "subject":null,
+    "body":"Hello admin, new user has been registered.",
+    "type":"sms",
+    "updated_at":"2023\/11\/11 17:11:15"
+  }
+]

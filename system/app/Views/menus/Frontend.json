@@ -1,0 +1,80 @@
+[
+  {
+      "icon": "",
+      "title": "App.site_menu_home",
+      "url": "/",
+      "external": false,
+      "children": [],
+      "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_about",
+    "url": "/site/about",
+    "external": false,
+    "children": [],
+    "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_contact",
+    "url": "/site/contact",
+    "external": false,
+    "children": [],
+    "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_pricing",
+    "url": "/site/pricing",
+    "external": false,
+    "children": [],
+    "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_faq",
+    "url": "/site/faq",
+    "external": false,
+    "children": [],
+    "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_blog",
+    "url": "",
+    "external": false,
+    "children": [
+      {
+        "title": "App.site_menu_blog_home",
+        "url": "/site/blog_home",
+        "external": false
+      },
+      {
+        "title": "App.site_menu_blog_post",
+        "url": "/site/blog_post",
+        "external": false
+      }
+    ],
+    "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_portfolio",
+    "url": "",
+    "external": false,
+    "children": [
+      {
+        "title": "App.site_menu_portfolio_overview",
+        "url": "/site/portfolio_overview",
+        "external": false
+      },
+      {
+        "title": "App.site_menu_portfolio_item",
+        "url": "/site/portfolio_item",
+        "external": false
+      }
+    ],
+    "permission_controller" : ""
+  }
+]
