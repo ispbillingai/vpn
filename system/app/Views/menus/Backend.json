@@ -117,6 +117,25 @@
     "permission_controller" : "Activity"
   },
   {
+    "icon": "fas fa-network-wired",
+    "title": "App.menu_vpn",
+    "url": "",
+    "external": false,
+    "children": [
+      {
+        "title": "App.menu_create_vpn",
+        "url": "vpn/create",
+        "external": false
+      },
+      {
+        "title": "App.menu_list_vpns",
+        "url": "vpn/list",
+        "external": false
+      }
+    ],
+    "permission_controller" : "Vpn"
+  },
+  {
     "icon": "fas fa-sign-out-alt",
     "title": "App.menu_logout",
     "url": "login/logout",

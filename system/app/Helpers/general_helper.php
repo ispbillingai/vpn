@@ -527,3 +527,40 @@ function delTree($dir) {
     }
     return rmdir($dir);
 }
+
+// File: app/Helpers/Permissions_helper.php
+
+if (!function_exists('getMenuControl')) {
+    function getMenuControl() {
+        $session = session();
+        $permissions = $session->get('permissions');
+        error_log("User Permissions: " . json_encode($permissions));
+        return $permissions;
+    }
+}
+
+if (!function_exists('checkPermission')) {
+    function checkPermission($controller, $method) {
+        $permissions = getMenuControl();
+        foreach ($permissions as $permission) {
+            if ($permission['name'] === $controller && in_array($method, $permission['methods'])) {
+                error_log("Permission granted for controller: $controller, method: $method");
+                return true;
+            }
+        }
+        error_log("Permission denied for controller: $controller, method: $method");
+        return false;
+    }
+}
+
+function hasPermission($controller, $method)
+{
+    $session = session();
+    $permissions = json_decode($session->get('rules'), true);
+
+    if (isset($permissions[$controller]) && in_array($method, $permissions[$controller])) {
+        return true;
+    }
+    return false;
+}
+

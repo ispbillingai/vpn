@@ -1,0 +1,13 @@
+<?php
+// File: app/Models/VpnModel.php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class VpnModel extends Model
+{
+    protected $table = 'vpns';
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['name', 'created_at']; // Add other fields as necessary
+}

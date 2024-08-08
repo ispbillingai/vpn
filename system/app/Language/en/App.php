@@ -698,7 +698,12 @@ return [
     "module_permission_menu" => "Permission Modules",
     "delete_alert_title" => "Deleted!",
     "delete_alert_msg" => "User deleted successfully!",
+//vpn
 
+
+"menu_vpn" => "VPN",
+"menu_create_vpn" => "Create VPN",
+"menu_list_vpns" => "List VPNs",
     // v1.3.5
     "site_menu_home" => "Home",
     "site_menu_about" => "About",
