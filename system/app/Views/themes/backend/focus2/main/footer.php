@@ -28,7 +28,7 @@
 </script>
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © Designed by <a href="https://quixkit.com/" target="_blank">Quixkit</a> &amp; Developed by <a href="https://eduardofiorini.com/" target="_blank">Eduardo Fiorini</a> - WebGuard v<?=version()?> </p>
+        <p>Copyright © Designed by <a href="https://freeispradius.com/" target="_blank">FreeIspRadius</a> &amp; Developed by <a href="https://freeispradius.com/" target="_blank">Eduardo Fiorini</a> - WebGuard v<?=version()?> </p>
     </div>
 </div>
 </div>

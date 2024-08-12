@@ -1,4 +1,5 @@
 <?php
+error_log('Loading header.php');
 $token = session()->get('token');
 $settings = session()->get('settings');
 $picture = session()->get('picture');
