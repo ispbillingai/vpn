@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" crossorigin="anonymous" rel="stylesheet">
+    <!-- Include Bootstrap CSS and JS directly -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" href="{$_theme}/assets/css/rt-plugins.css">
     <link rel="stylesheet" href="{$_theme}/assets/css/app.css">
@@ -60,16 +64,17 @@
                  <span>{Lang::T('Dashboard')}</span>
                 </span>
               </a>
-            </li> {$_MENU_AFTER_DASHBOARD} {if $_c['disable_voucher'] != 'yes'} <li>
+            </li>
+            <!-- Hidden Menu Items -->
+            <li class="hidden">
               <a href="{$_url}voucher/activation" class="navItem {if $_system_menu eq 'voucher'} active {/if}">
                 <span class="flex items-center">
                   <iconify-icon class="nav-icon" icon="heroicons-outline:ticket"></iconify-icon>
                   <span>{Lang::T('Voucher')}</span>
                 </span>
               </a>
-            </li> {/if} {if $_c['payment_gateway'] != 'none' or $_c['payment_gateway'] == '' }
-            {if $_c['enable_balance'] == 'yes'}
-            <li class="">
+            </li>
+            <li class="hidden">
               <a href="{$_url}order/balance" class="navItem {if $_system_menu eq 'balance'} active {/if}">
                 <span class="flex items-center">
                   <iconify-icon class=" nav-icon" icon="heroicons-outline:shopping-cart"></iconify-icon>
@@ -77,8 +82,7 @@
                 </span>
               </a>
             </li>
-             {/if}
-            <li class="">
+            <li class="hidden">
               <a href="{$_url}order/package" class="navItem {if $_system_menu eq 'package'} active {/if}">
                 <span class="flex items-center">
                   <iconify-icon class=" nav-icon" icon="heroicons-outline:shopping-cart"></iconify-icon>
@@ -86,31 +90,58 @@
                 </span>
               </a>
             </li>
-            <li class="">
+            <li class="hidden">
               <a href="{$_url}order/history" class="navItem {if $_system_menu eq 'history'} active {/if}">
                 <span class="flex items-center">
                   <iconify-icon class=" nav-icon" icon="heroicons-outline:document-text"></iconify-icon>
                   <span>{Lang::T('Order History')}</span>
                 </span>
               </a>
- </li> {/if} {$_MENU_AFTER_ORDER} <li class="">
-  <a href="{$_url}voucher/list-activated" class="navItem {if $_system_menu eq 'list-activated'} active {/if}">
-    <span class="flex items-center">
-      <iconify-icon class=" nav-icon" icon="heroicons-outline:calendar"></iconify-icon>
-      <span>{Lang::T('Activation History')}</span>
-    </span>
-  </a>
-</li>
-{$_MENU_AFTER_HISTORY}
-<li class="">
-  <a href="{$_url}plugin/support_tickets_clients" class="navItem {if $_system_menu eq 'support_tickets_clients'} active {/if}">
-    <span class="flex items-center">
-      <iconify-icon class=" nav-icon" icon="heroicons-outline:mail"></iconify-icon>
-      <span>{Lang::T('Support Ticket')}</span>
-    </span>
-  </a>
-</li>
-</ul>
+            </li>
+            <li class="hidden">
+              <a href="{$_url}voucher/list-activated" class="navItem {if $_system_menu eq 'list-activated'} active {/if}">
+                <span class="flex items-center">
+                  <iconify-icon class=" nav-icon" icon="heroicons-outline:calendar"></iconify-icon>
+                  <span>{Lang::T('Activation History')}</span>
+                </span>
+              </a>
+            </li>
+            <!-- End of Hidden Menu Items -->
+            <!-- New Menu Items -->
+            <li class="">
+              <a href="{$_url}vpn/remote-access" class="navItem {if $_system_menu eq 'remote-access'} active {/if}">
+                <span class="flex items-center">
+                  <iconify-icon class="nav-icon" icon="heroicons-outline:computer-desktop"></iconify-icon>
+                  <span>Remote Access</span>
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="{$_url}vpn/create-vpn" class="navItem {if $_system_menu eq 'create-vpn'} active {/if}">
+                <span class="flex items-center">
+                  <iconify-icon class="nav-icon" icon="heroicons-outline:shield-check"></iconify-icon>
+                  <span>Create VPN</span>
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="{$_url}vpn/list-vpns" class="navItem {if $_system_menu eq 'list-vpns'} active {/if}">
+                <span class="flex items-center">
+                  <iconify-icon class="nav-icon" icon="heroicons-outline:collection"></iconify-icon>
+                  <span>List VPNs</span>
+                </span>
+              </a>
+            </li>
+            <!-- End of New Menu Items -->
+            <li class="">
+              <a href="{$_url}plugin/support_tickets_clients" class="navItem {if $_system_menu eq 'support_tickets_clients'} active {/if}">
+                <span class="flex items-center">
+                  <iconify-icon class=" nav-icon" icon="heroicons-outline:mail"></iconify-icon>
+                  <span>{Lang::T('Support Ticket')}</span>
+                </span>
+              </a>
+            </li>
+          </ul>
           <!-- Upgrade Your Business Plan Card Start -->
           <div class="bg-slate-900 mb-10 mt-24 p-4 relative text-center rounded-2xl text-white" id="sidebar_bottom_wizard">
             <img src="{$_theme}/assets/images/svg/rabit.svg" alt="" class="mx-auto relative -mt-[73px]">
