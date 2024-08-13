@@ -21,12 +21,7 @@ system/lan/**
 !system/lan/turkish.json
 !system/lan/english.json
 !system/lan/country.json
-system/uploads/**
-!system/uploads/*.default.png
-system/uploads/sms/**
-!system/uploads/sms/index.html
-system/uploads/system/**
-!system/uploads/system/index.html
+
 logs.txt
 
 *.log
