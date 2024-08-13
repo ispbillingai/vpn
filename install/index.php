@@ -1,105 +1,57 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-$php_version_success = false;
-$mysql_success = false;
-$curl_success = false;
-$mbstring_success = false;
-$intl_success = false;
-$json_success = false;
-$mysqlnd_success = false;
-$xml_success = false;
-$gd_success = false;
-$timezone_success = false;
-$zlib_success = false;
+<head>
+    <title>FreeIspRadius Installer</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-$php_version_required = "8.1";
-$current_php_version = PHP_VERSION;
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-//check required php version
-if (version_compare($current_php_version, $php_version_required) >= 0) {
-    $php_version_success = true;
-}
+    <link type='text/css' href='css/style.css' rel='stylesheet' />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-//check mySql 
-if (function_exists("mysqli_connect")) {
-    $mysql_success = true;
-}
+<body style='background-color: #FBFBFB;'>
+    <div id='main-container'>
+        <img src="img/log.png" class="img-responsive" alt="Logo" />
+        <hr>
+        <!--  contents area start  -->
+        <div class="row">
+            <div class="col-md-12">
+                <h4> FreeIspRadius Installer </h4>
+                <h5>Please Read Before Continue</h5>
+                <p><strong>Instructions On Installation</strong><br>
+                    Application Name: FreeIspRadius <br>
+                    Release Date: 30/10/2015<br>
+                    By: FreeIspRadius [ <a href="https://FreeIspRadius.com" target="_blank">https://freeispradius.com</a> ]<br>
+                    Donate Paypal: <b>FreeIspRadius</b><br>
+                    <br>
+                    <strong>Syarat Penggunaan:</strong><br>
+                    Syarat Penggunaan ini berlaku untuk semua versi.<br><br>
+                <ul>
+                    <li>Please use this application wisely, you can redesign the script and appearance
+                        This application suits your needs, increase the number of copies or distribute this application.
+                        Please note that you don't delete the developer link.</li>
+                    <li>There is no guarantee from us if you experience an error or feel at a loss when using this application,
+                        You can only provide feedback that contains an error report, with the applicable terms and conditions.</li>
+                    <li>Everything related to fees or donations, whatever the version, you can update for the life of the application
+                        this is still being developed. Please do not misunderstand that our development team is commercializing this product
+                        and you buy our products.</li>
+                    <li>This application is social so it can be developed together. That's why we also invite volunteers
+                        who wants to develop this application.</li>
+                    <li>The author reserves the right at any time to change the provisions of the Terms of Use without prior notice.</li>
+                </ul>
+            </div>
+            <div class="col-md-12"><br>
+                <a href="step2.php" class="btn btn-primary">Accept &amp; Continue</a>
+            </div>
+        </div>
+        <!--  contents area end  -->
+    </div>
+    <div class="footer">Copyright &copy; 2024 FreeIspRadius. All Rights Reserved<br /><br /></div>
+</body>
 
-//check curl 
-if (function_exists("curl_version")) {
-    $curl_success = true;
-}
-
-//check mbstring 
-if (extension_loaded('mbstring')) {
-    $mbstring_success = true;
-}
-
-//check intl 
-if (extension_loaded('intl')) {
-    $intl_success = true;
-}
-
-//check json 
-if (extension_loaded('json')) {
-    $json_success = true;
-}
-
-//check mysqlnd 
-if (extension_loaded('mysqlnd')) {
-    $mysqlnd_success = true;
-}
-
-//check xml 
-if (extension_loaded('xml')) {
-    $xml_success = true;
-}
-
-//check gd
-if (extension_loaded('gd') && function_exists('gd_info')) {
-    $gd_success = true;
-}
-
-$timezone_settings = ini_get('date.timezone');
-if ($timezone_settings) {
-    $timezone_success = true;
-}
-
-if (!ini_get("zlib.output_compression")) {
-    $zlib_success = true;
-}
-
-//check if all requirement is success
-if ($php_version_success && $mysql_success && $curl_success && $mbstring_success && $gd_success && $timezone_success && $intl_success && $json_success && $mysqlnd_success && $xml_success && $zlib_success) {
-    $all_requirement_success = true;
-} else {
-    $all_requirement_success = false;
-}
-
-$writeable_directories = array(
-    'cache' => '/system/writable/cache',
-    'debugbar' => '/system/writable/debugbar',
-    'logs' => '/system/writable/logs',
-    'session' => '/system/writable/session',
-    'uploads' => '/system/writable/uploads',
-    'modules' => '/system/app/Modules',
-    'env' => '/system/.env',
-    'files' => '/assets/img',
-    'routes' => '/index.php'
-);
-
-foreach ($writeable_directories as $value) {
-    if (!is_writeable(".." . $value)) {
-        $all_requirement_success = false;
-    }
-}
-
-$dashboard_url = $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME'];
-$dashboard_url = preg_replace('/install.*/', '', $dashboard_url); //remove everything after index.php
-if (!empty($_SERVER['HTTPS'])) {
-    $dashboard_url = 'https://' . $dashboard_url;
-} else {
-    $dashboard_url = 'http://' . $dashboard_url;
-}
-
-include "view/index.php";
+</html>

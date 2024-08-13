@@ -1,0 +1,21 @@
+{
+    "name": "hotspotbilling/freeispradius",
+    "type": "template",
+    "description": "FreeIspradius a Hotspot Billing Software.",
+    "keywords": ["template", "FreeIspradius", "Freeispradius", "Mikrotik", "Hotspot", "Billing"],
+    "homepage": "https://github.com/freeispradius",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ibnux",
+            "email": "contact@freeispradius.com",
+            "homepage": "https://freeispradius.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "kopokopo/k2-connect-php": "^1.2",
+        "stripe/stripe-php": "^15.1",
+        "selcom/selcom-apigw-client": "^1.0"
+    }
+}
